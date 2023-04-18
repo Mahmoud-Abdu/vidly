@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 0 0 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.navBar {
+  margin-bottom: 30px;
+}
+
+.newMovieBtn {
+  margin-bottom: 14px;
+}
+
+ 
