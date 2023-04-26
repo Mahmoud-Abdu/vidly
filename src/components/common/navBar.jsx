@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-function NavBar(props) {
+function NavBar({ user }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">
         Vidly
       </Link>
@@ -35,6 +35,8 @@ function NavBar(props) {
               Rentals
             </NavLink>
           </li>
+         {!user &&
+         <React.Fragment>
           <li className="nav-item">
             <NavLink className="nav-link" to="/login">
               Login
@@ -45,6 +47,22 @@ function NavBar(props) {
               Register
             </NavLink>
           </li>
+          </React.Fragment>
+          }
+            {user &&
+         <React.Fragment>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/profile">
+               {user.name}
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/logout">
+              Logout
+            </NavLink>
+          </li>
+          </React.Fragment>
+          }
         </ul>
       </div>
     </nav>
